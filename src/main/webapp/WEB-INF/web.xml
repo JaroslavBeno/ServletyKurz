@@ -21,6 +21,15 @@
     <url-pattern>/simpleservletxml2</url-pattern>
   </servlet-mapping>
 
+  <filter>
+    <filter-name>FirstFilterXml</filter-name>
+    <filter-class>sk.jaroslavbeno.filtre.FirstFilter</filter-class>
+    <init-param>
+      <param-name>meno</param-name>
+      <param-value>Jarko Beno</param-value>
+    </init-param>
+  </filter>
+
 
 
 </web-app>
