@@ -46,6 +46,11 @@ public class SimpleServlet extends HttpServlet {
         out.println("<br>");
         out.printf("stranka: %s", stranka);
 
+        String priezvisko = req.getParameter("priezvisko");
+        out.println("<br>");
+        out.printf("priezvisko: %s", priezvisko);
+
+
         out.println("</body> </html>");
 
     }
