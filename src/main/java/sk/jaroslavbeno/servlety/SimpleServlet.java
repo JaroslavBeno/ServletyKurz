@@ -50,6 +50,22 @@ public class SimpleServlet extends HttpServlet {
         out.println("<br>");
         out.printf("priezvisko: %s", priezvisko);
 
+        String pohlavie = req.getParameter("pohlavie");
+        out.println("<br>");
+        out.printf("pohlavie: %s", pohlavie);
+
+//        String stat = req.getParameter("stat");
+//        out.println("<br>");
+//        out.printf("stat: %s", stat);
+
+        String[] stat = req.getParameterValues("stat");
+        out.println("<br>");
+        for(int i = 0; i<stat.length; i++){
+            out.printf("%s, ", stat[i]);
+
+        }
+
+
 
         out.println("</body> </html>");
 
