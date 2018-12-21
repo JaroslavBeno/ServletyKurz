@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="sk.jaroslavbeno.app.model.Film" %>
+<%@ page import="sk.jaroslavbeno.app.model.dto.FilmDto" %>
 <%@ page import="java.util.List" %>
 <html>
 <body>
@@ -16,9 +16,9 @@
 <ul>
 <%
 
-List<Film> films = (List<Film>) request.getAttribute("filmy");
+List<FilmDto> films = (List<FilmDto>) request.getAttribute("filmy");
 if(films !=null){
-    for(Film film : films){
+    for(FilmDto film : films){
         out.print("<li>"+film.getNazov()+"</li>");
     }
 }

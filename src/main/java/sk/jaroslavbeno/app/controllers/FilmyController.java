@@ -1,6 +1,7 @@
 package sk.jaroslavbeno.app.controllers;
 
 import sk.jaroslavbeno.app.model.Film;
+import sk.jaroslavbeno.app.model.dto.FilmDto;
 import sk.jaroslavbeno.app.services.FilmyService;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ public class FilmyController extends HttpServlet {
         String zaner = req.getParameter("zaner");
 
         FilmyService filmyService = new FilmyService();
-        List<Film> filmy = filmyService.dajZoznamFilmovPodlaZanru(zaner);
+        List<FilmDto> filmy = filmyService.dajZoznamFilmovPodlaZanru(zaner);
 
         req.setAttribute("filmy",filmy);
         req.getRequestDispatcher("filmy.jsp").forward(req,resp);
