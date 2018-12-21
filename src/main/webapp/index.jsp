@@ -1,6 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+
+
 <html>
 <body>
-<h2>Hello World! redeploy</h2>
+<h2>Hello World! redeploy <%=new Date()%> </h2>
 
 <%
     int j = 0;
@@ -45,10 +49,13 @@ public int spocitaj(int a, int b){
     }
 %>
 
+<%
+String sprava = request.getParameter("sprava");
+%>
 
+<h2><%= sprava %></h2>
+Ďalšími dostupnými objektami sú request – HttpServletRequest, response – HttpServletResponse, out – PrintWriter, session – HttpSession, application – ServletContext, config – ServletConfig, pageContext – JspWriters, page – synonimum pre this používa sa na volanie metód definovaných v preloženej servlet triede.
 
-
-
-
+<%@ include file="/footer.jsp"%>
 </body>
 </html>

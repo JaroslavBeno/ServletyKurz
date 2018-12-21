@@ -1,0 +1,1 @@
+<footer>toto je footer stranky</footer>
