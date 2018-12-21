@@ -38,6 +38,14 @@ public class SimpleServlet extends HttpServlet {
         out.println("<br>");
         out.printf("kontextUlozeneMeno: %s", context.getAttribute("kontextUlozeneMeno"));
 
+        String filterAttribute = (String) req.getSession().getAttribute("filterAttribute");
+        out.println("<br>");
+        out.printf("filterAttribute: %s", filterAttribute);
+
+        String kontextAtribut = (String) req.getServletContext().getAttribute("filter");
+        out.println("<br>");
+        out.printf("kontextAtribut: %s", kontextAtribut);
+
 
         out.println("</body> </html>");
 
