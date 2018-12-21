@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebFilter(urlPatterns = {"/*"},
+@WebFilter(urlPatterns = {"/asfsfsfs"},
         filterName = "FirstFilter name",
         initParams = {@WebInitParam(name = "meno", value = "Jarko Beno")})
 public class FirstFilter implements Filter {
