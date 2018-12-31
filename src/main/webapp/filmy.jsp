@@ -17,5 +17,33 @@
 </c:forEach>
 </ul>
 
+<c:out value="${film.nazov}" />
+
+<c:set var="meno" scope="application" value="Jaro"/>
+<br>
+meno> <c:out value="${applicationScope.meno}" />
+<c:remove var="meno" />
+<br>
+meno> <c:out value="${applicationScope.meno}" />
+
+<br>
+<c:if test = "${vek < 18}">
+    <p>Vek je menej ako 18 a je to presne:  <c:out value = "${vek}"/><p>
+</c:if>
+
+<br>
+<c:choose>
+    <c:when test="${vek > 18}">
+        <c:out value="vek ${vek} je > ako 18"/>
+    </c:when>
+    <c:when test="${vek < 18}">
+        <c:out value="vek ${vek} je < ako 18"/>
+    </c:when>
+    <c:otherwise>
+        <c:out value="vek ${vek} je = 18"/>
+    </c:otherwise>
+</c:choose>
+
+
 </body>
 </html
