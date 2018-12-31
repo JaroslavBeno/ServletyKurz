@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="sk.jaroslavbeno.app.model.dto.FilmDto" %>
-<%@ page import="java.util.List" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <body>
 <h2>Vyber žáner pre zobrazenie filmov:</h2>
@@ -12,33 +11,11 @@
     <input type='submit' name='Vyber' />
 <form>
 
-<h4>Filmy:</h4>
 <ul>
-<%
-
-List<FilmDto> films = (List<FilmDto>) request.getAttribute("filmy");
-if(films !=null){
-    for(FilmDto film : films){
-        out.print("<li>"+film.getNazov()+"</li>");
-    }
-}
-%>
+<c:forEach items="${filmy}" var="film">
+    <li>${film.nazov} - ${film.zaner}</li>
+</c:forEach>
 </ul>
-
-<%=request.getParameter("zaner")%>
-<%
-    request.setAttribute("stranka", "filmy.jsp");
-    application.setAttribute("stranka", "filmy.jsp z application");
-%>
-<br>
-${zaner}
-
-<br>
-${film.nazov}
-
-<br>
-stranka> ${applicationScope.stranka}
-
 
 </body>
 </html
