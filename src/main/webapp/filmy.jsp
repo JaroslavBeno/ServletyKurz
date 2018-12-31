@@ -25,6 +25,20 @@ if(films !=null){
 %>
 </ul>
 
+<%=request.getParameter("zaner")%>
+<%
+    request.setAttribute("stranka", "filmy.jsp");
+    application.setAttribute("stranka", "filmy.jsp z application");
+%>
+<br>
+${zaner}
+
+<br>
+${film.nazov}
+
+<br>
+stranka> ${applicationScope.stranka}
+
 
 </body>
 </html
